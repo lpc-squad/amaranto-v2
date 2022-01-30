@@ -9,7 +9,7 @@ const { getSession, commitSession, destroySession } =
     cookie: {
       name: `amaranto_${!isProd && "DEV_"}session`,
       secure: true,
-    }
+    },
   });
 
 export { getSession, commitSession, destroySession };

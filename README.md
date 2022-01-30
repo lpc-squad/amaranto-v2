@@ -1,3 +1,13 @@
+# Main documentation
+
+## Resources
+
+- https://remix.run/docs/en/v1/api/remix#sessions
+- https://github.com/developerg0d/nextjs-metamask-login
+- https://github.com/EthWorks/useDapp
+- https://usedapp.readthedocs.io/en/latest/getting-started.html#installation
+- https://reactrouterdotcom.fly.dev/docs/en/v6/examples/auth
+
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)

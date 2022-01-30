@@ -5,8 +5,8 @@ export default function Index() {
   const { account, activateBrowserWallet } = useEthers();
 
   useEffect(() => {
-    console.log("DESDE INDEX", { account })
-  }, [account])
+    console.log("DESDE INDEX", { account });
+  }, [account]);
 
   return (
     <div>

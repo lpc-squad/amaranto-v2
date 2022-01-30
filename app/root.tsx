@@ -4,7 +4,7 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
 import { Config, DAppProvider, Ropsten } from "@usedapp/core";
@@ -12,14 +12,13 @@ import { AuthProvider } from "./src/context/AuthContext";
 
 const config: Config = {
   readOnlyChainId: Ropsten.chainId,
-}
+};
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
 };
 
 export default function App() {
-
   return (
     <html lang="en">
       <head>
