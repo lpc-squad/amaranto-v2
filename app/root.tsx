@@ -7,12 +7,19 @@ import {
   ScrollRestoration
 } from "remix";
 import type { MetaFunction } from "remix";
+import { Config, DAppProvider, Ropsten } from "@usedapp/core";
+import { AuthProvider } from "./src/context/AuthContext";
+
+const config: Config = {
+  readOnlyChainId: Ropsten.chainId,
+}
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
 };
 
 export default function App() {
+
   return (
     <html lang="en">
       <head>
@@ -22,7 +29,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <DAppProvider config={config}>
+          <AuthProvider>
+            <Outlet />
+          </AuthProvider>
+        </DAppProvider>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}
